@@ -1,0 +1,10 @@
+.navbar-options {
+  display: flex;
+}
+.navbar-links {
+  padding: 1rem;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}

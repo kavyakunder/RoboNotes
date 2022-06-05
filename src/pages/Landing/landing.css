@@ -1,0 +1,16 @@
+.hero-section {
+  display: flex;
+  margin: 3rem;
+  align-items: center;
+}
+.btn-home {
+  padding: 1rem;
+  font-size: 1.3rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-dark);
+  border-color: var(--primary-color);
+}
+.hero-h1 {
+  width: 70%;
+  margin: 0 auto;
+}
