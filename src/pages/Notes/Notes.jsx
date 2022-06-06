@@ -9,7 +9,6 @@ const Notes = () => {
   const {
     noteState: { notes },
   } = useNote();
-  console.log("notes sate", notes);
   return (
     <div>
       <Navbar />
