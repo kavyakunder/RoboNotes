@@ -30,3 +30,8 @@
   cursor: pointer;
   outline: none;
 }
+.note-label {
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
