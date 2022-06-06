@@ -7,8 +7,6 @@ const NotesProvider = ({ children }) => {
     content: "",
   });
 
-  //   const initialState =
-
   const [noteState, noteDispatch] = useReducer(NotesReducer, {
     notes: [],
     trash: [],
