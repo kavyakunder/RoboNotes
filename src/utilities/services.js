@@ -23,6 +23,7 @@ const addNotes = async (noteDispatch, note) => {
       noteDispatch({ type: "ADD_NOTE", payload: notes });
     }
   } catch (error) {
+    toast.error("Error occured!");
     console.log(error.message);
   }
 };
