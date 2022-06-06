@@ -14,7 +14,7 @@ function CreateNote() {
 
   const addNoteHandler = (e) => {
     e.preventDefault();
-    if (!(note.title === "" && note.content === "")) {
+    if (!(note.title === "" || note.content === "")) {
       addNotes(noteDispatch, { note: { ...note } });
     }
   };
