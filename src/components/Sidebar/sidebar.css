@@ -1,0 +1,20 @@
+.sidebar-notes {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 13rem;
+  /* background-color: var(--light-grey); */
+}
+.sidebar-notes ul li {
+  color: var(--secondary-dark);
+  padding: 1.5rem;
+  font-size: 1.3rem;
+}
+.sidebar-notes ul li:hover {
+  background-color: var(--light-grey);
+}
+.sidebar-notes ul li a {
+  color: var(--secondary-dark);
+  text-decoration: none;
+  padding: 1rem;
+}
