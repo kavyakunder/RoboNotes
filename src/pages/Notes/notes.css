@@ -1,0 +1,5 @@
+.note-section {
+  margin-left: 12rem;
+  display: flex;
+  flex-wrap: wrap;
+}
