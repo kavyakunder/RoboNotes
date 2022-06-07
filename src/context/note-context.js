@@ -13,6 +13,7 @@ const NotesProvider = ({ children }) => {
     trash: [],
     archive: [],
     pickColor: false,
+    sortBy: null,
   });
   return (
     <NotesContext.Provider value={{ note, setNote, noteState, noteDispatch }}>

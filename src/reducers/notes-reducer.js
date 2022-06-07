@@ -11,6 +11,8 @@ const NotesReducer = (noteState, { type, payload }) => {
     case "SHOW_COLOR_PALETTE_MODAL":
       return { ...noteState, pickColorModal: payload };
 
+    case "SORT_BY_DATE":
+      return { ...noteState, sortByDateTime: payload };
     default:
       return noteState;
   }
