@@ -5,12 +5,14 @@ const NotesProvider = ({ children }) => {
   const [note, setNote] = useState({
     title: "",
     content: "",
+    label: "",
   });
 
   const [noteState, noteDispatch] = useReducer(NotesReducer, {
     notes: [],
     trash: [],
     archive: [],
+    pickColor: false,
   });
   return (
     <NotesContext.Provider value={{ note, setNote, noteState, noteDispatch }}>

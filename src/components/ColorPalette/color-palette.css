@@ -1,0 +1,36 @@
+.palette-container {
+  display: flex;
+  flex-direction: row;
+  z-index: 5;
+  position: absolute;
+  width: 60%;
+  border-radius: 0.5rem;
+  background-color: rgb(196, 196, 196);
+  right: 0;
+  left: 0;
+  top: 100%;
+  padding: 0.8rem;
+}
+
+.palette-container-modal {
+  z-index: 5;
+  min-width: 5rem;
+  position: absolute;
+  right: 30%;
+  top: 70%;
+  background-color: rgb(230, 230, 230);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}
+
+.color-item {
+  margin: 0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.color-item:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
