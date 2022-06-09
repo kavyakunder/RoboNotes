@@ -8,7 +8,6 @@ function Archive() {
   const {
     noteState: { archive },
   } = useNote();
-  console.log("Archive is", archive);
 
   return (
     <div>
