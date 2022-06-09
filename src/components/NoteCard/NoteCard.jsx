@@ -45,9 +45,9 @@ const NoteCard = ({ note }) => {
 
       {location.pathname === "/trash" && (
         <>
-          <button style={{ backgroundColor: noteColor }}>
+          {/* <button style={{ backgroundColor: noteColor }}>
             <i class="fa-solid fa-folder"></i>
-          </button>
+          </button> */}
           <button
             onClick={() => {
               toast.success("Note successfully deleted!");
@@ -55,7 +55,7 @@ const NoteCard = ({ note }) => {
             }}
             style={{ backgroundColor: noteColor }}
           >
-            <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-trash-xmark"></i>
           </button>
         </>
       )}

@@ -12,12 +12,12 @@ function Sidebar() {
         </li>
         <li>
           <NavLink to="/notes">
-            <i class="fa-solid fa-note-sticky"></i>Notes
+            <i class="fa-solid fa-memo-pad"></i>Notes
           </NavLink>
         </li>
         <li>
           <NavLink to="/archive">
-            <i class="fa-solid fa-inbox"></i>Archive
+            <i class="fa-solid fa-folder-arrow-down"></i>Archive
           </NavLink>
         </li>
         <li>
