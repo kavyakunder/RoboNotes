@@ -28,7 +28,9 @@ function Navbar() {
             <Link className="navbar-links" to="/notes">
               Notes
             </Link>
-            <button onClick={() => signoutAuth(setAuth)}>Logout</button>
+            <button className="logout-btn" onClick={() => signoutAuth(setAuth)}>
+              Logout
+            </button>
           </>
         ) : (
           <Link className="navbar-links" to="/login">
