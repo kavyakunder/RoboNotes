@@ -1,5 +1,4 @@
 import React from "react";
-import { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import "./create-note.css";
 import { addNotes } from "../../utilities/services";
@@ -59,8 +58,6 @@ function CreateNote() {
         <button style={{ fontSize: "30px" }} type="submit">
           <i class="fa-solid fa-plus add-icon"></i>
         </button>
-
-        <Toaster />
       </form>
     </>
   );

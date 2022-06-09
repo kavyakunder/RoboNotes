@@ -18,27 +18,34 @@ function Navbar() {
   };
 
   return (
-    <div className="navbar">
-      <div className="navbar-options">
-        <Link className="navbar-links" to="/">
-          Home
-        </Link>
-        {auth.isAuth === true ? (
-          <>
-            <Link className="navbar-links" to="/notes">
-              Notes
-            </Link>
-            <button className="logout-btn" onClick={() => signoutAuth(setAuth)}>
-              Logout
-            </button>
-          </>
-        ) : (
-          <Link className="navbar-links" to="/login">
-            Login
+    <>
+      <div className="navbar">
+        <span className="heading">RoboNotes</span>
+
+        <div className="navbar-options">
+          <Link className="navbar-links" to="/">
+            Home
           </Link>
-        )}
+          {auth.isAuth === true ? (
+            <>
+              <Link className="navbar-links" to="/notes">
+                Notes
+              </Link>
+              <button
+                className="logout-btn"
+                onClick={() => signoutAuth(setAuth)}
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link className="navbar-links" to="/login">
+              Login
+            </Link>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

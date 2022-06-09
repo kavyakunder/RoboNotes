@@ -5,10 +5,11 @@
 }
 .btn-home {
   padding: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   background-color: var(--primary-color);
   color: var(--secondary-dark);
   border-color: var(--primary-color);
+  border-radius: 4px;
 }
 .hero-h1 {
   width: 70%;

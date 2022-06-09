@@ -1,4 +1,5 @@
 import React from "react";
+import toast from "react-hot-toast";
 import { useLocation } from "react-router-dom";
 import { useNote } from "../../context/note-context";
 import { trashNote } from "../../utilities/trashNote";
@@ -48,9 +49,10 @@ const NoteCard = ({ note }) => {
             <i class="fa-solid fa-folder"></i>
           </button>
           <button
-            onClick={() =>
-              noteDispatch({ type: "REMOVE_FROM_TRASH", payload: noteDate })
-            }
+            onClick={() => {
+              toast.success("Note successfully deleted!");
+              noteDispatch({ type: "REMOVE_FROM_TRASH", payload: noteDate });
+            }}
             style={{ backgroundColor: noteColor }}
           >
             <i class="fa-solid fa-trash"></i>
