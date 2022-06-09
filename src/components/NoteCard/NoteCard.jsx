@@ -2,11 +2,12 @@ import React from "react";
 import toast from "react-hot-toast";
 import { useLocation } from "react-router-dom";
 import { useNote } from "../../context/note-context";
-import { trashNote } from "../../utilities/trashNote";
+import { trashNote, archiveToTrashNote } from "../../utilities/trashNote";
+import { archiveNote, restoreNote } from "../../utilities/archiveNote";
 import "./note-card.css";
 const NoteCard = ({ note }) => {
   const { title, content, noteDate, noteColor, label } = note;
-  const { noteDispatch } = useNote();
+  const { noteState, noteDispatch } = useNote();
   const { pathname } = useLocation();
 
   return (
@@ -19,10 +20,10 @@ const NoteCard = ({ note }) => {
       {pathname === "/notes" && (
         <>
           <button
-            onClick={() => archiveNote(noteDispatch, note)}
+            onClick={() => archiveNote(noteState, noteDispatch, note)}
             style={{ backgroundColor: noteColor }}
           >
-            <i class="fa-solid fa-folder"></i>
+            <i class="fa-solid fa-folder-arrow-down"></i>
           </button>
           <button
             onClick={() => trashNote(noteDispatch, note)}
@@ -34,10 +35,16 @@ const NoteCard = ({ note }) => {
       )}
       {pathname === "/archive" && (
         <>
-          <button style={{ backgroundColor: noteColor }}>
-            <i class="fa-solid fa-folder"></i>
+          <button
+            onClick={() => restoreNote(noteState, noteDispatch, note)}
+            style={{ backgroundColor: noteColor }}
+          >
+            <i class="fa-solid fa-folder-arrow-up"></i>
           </button>
-          <button style={{ backgroundColor: noteColor }}>
+          <button
+            onClick={() => archiveToTrashNote(noteState, noteDispatch, note)}
+            style={{ backgroundColor: noteColor }}
+          >
             <i class="fa-solid fa-trash"></i>
           </button>
         </>
