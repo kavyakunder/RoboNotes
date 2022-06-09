@@ -3,7 +3,7 @@
   font-size: 1.4rem;
   background-color: var(--secondary-dark);
   color: var(--white);
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   text-align: center;
