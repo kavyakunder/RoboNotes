@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 const loginAuth = async (user) => {
   try {
     const { data } = await axios.post("/api/auth/login", user);
+    toast.success("Login successful");
     return data;
   } catch (error) {
     return false;

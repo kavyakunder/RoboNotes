@@ -6,5 +6,21 @@
 }
 .navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+.navbar-options a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--secondary-dark);
+}
+.logout-btn {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  margin-top: 0.2rem;
+}
+.heading {
+  font-size: 2rem;
+  margin-left: 1rem;
+  margin-top: 0.4rem;
+  font-weight: 500;
 }

@@ -1,8 +1,12 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import { useAuth } from "../../context/auth-context";
+import { Link } from "react-router-dom";
 import "./landing.css";
+
 function Landing() {
+  const { auth } = useAuth();
   return (
     <>
       <Navbar />
@@ -19,7 +23,18 @@ function Landing() {
             RoboNotes is the best place to jot down quick thoughts or to save
             longer notes!
           </h2>
-          <button className="btn-home">Lets note!</button>
+
+          {auth.isAuth === true ? (
+            <>
+              <Link to="/notes">
+                <button className="btn-home">Lets note!</button>
+              </Link>
+            </>
+          ) : (
+            <Link to="/login">
+              <button className="btn-home"> Lets note!</button>
+            </Link>
+          )}
         </div>
       </div>
       <Footer />
