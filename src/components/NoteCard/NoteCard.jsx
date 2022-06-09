@@ -6,8 +6,8 @@ import { trashNote } from "../../utilities/trashNote";
 import "./note-card.css";
 const NoteCard = ({ note }) => {
   const { title, content, noteDate, noteColor, label } = note;
-  const { noteState, noteDispatch } = useNote();
-  const location = useLocation();
+  const { noteDispatch } = useNote();
+  const { pathname } = useLocation();
 
   return (
     <div className="note" style={{ backgroundColor: noteColor }}>
@@ -16,7 +16,7 @@ const NoteCard = ({ note }) => {
       <p>{noteDate}</p>
       <span className="note-label">{label}</span>
 
-      {location.pathname === "/notes" && (
+      {pathname === "/notes" && (
         <>
           <button
             onClick={() => archiveNote(noteDispatch, note)}
@@ -32,7 +32,7 @@ const NoteCard = ({ note }) => {
           </button>
         </>
       )}
-      {location.pathname === "/archive" && (
+      {pathname === "/archive" && (
         <>
           <button style={{ backgroundColor: noteColor }}>
             <i class="fa-solid fa-folder"></i>
@@ -43,11 +43,8 @@ const NoteCard = ({ note }) => {
         </>
       )}
 
-      {location.pathname === "/trash" && (
+      {pathname === "/trash" && (
         <>
-          {/* <button style={{ backgroundColor: noteColor }}>
-            <i class="fa-solid fa-folder"></i>
-          </button> */}
           <button
             onClick={() => {
               toast.success("Note successfully deleted!");
