@@ -48,7 +48,7 @@ function Login() {
 
   return (
     <div>
-      <form
+      <div
         className="login-div"
         onSubmit={(e) => {
           e.preventDefault();
@@ -107,7 +107,7 @@ function Login() {
             </Link>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 }
