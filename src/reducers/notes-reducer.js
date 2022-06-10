@@ -10,7 +10,23 @@ const NotesReducer = (noteState, { type, payload }) => {
         ...noteState,
         trash: [...noteState.trash, payload],
       };
-
+    case "ADD_TO_ARCHIVE":
+      return {
+        ...noteState,
+        archive: [...noteState.archive, payload],
+      };
+    case "ARCHIVE_TO_TRASH":
+      return {
+        ...noteState,
+        archive: payload.archive,
+        trash: [...noteState.trash, { ...payload.trash }],
+      };
+    case "RESTORE_ARCHIVE_NOTE":
+      return {
+        ...noteState,
+        archive: payload.archive,
+        notes: [...noteState.notes],
+      };
     case "REMOVE_FROM_TRASH":
       return {
         ...noteState,
