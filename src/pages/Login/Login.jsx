@@ -12,6 +12,7 @@ function Login() {
   });
 
   const { setAuth } = useAuth();
+  console.log("setAuth is", setAuth);
   const navigate = useNavigate();
   const [loginError, setLoginError] = useState("");
 
