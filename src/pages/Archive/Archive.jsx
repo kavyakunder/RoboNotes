@@ -10,7 +10,6 @@ function Archive() {
     noteState: { archive },
   } = useNote();
 
-  console.log("Archive is", archive);
   return (
     <div>
       <Navbar />
